@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TMDB Tizen App</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+             <div class="nav-left">
+                <img src="images/logo_pelicula.png" alt="Logo" class="logo">
+                <h1>MovieVault</h1>
+            </div>
+            <div class="nav-center">
+                <ul>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Peliculas</a>
+                        <div class="dropdown-content">
+                            <a href="#" onclick="fetchMovies('popular')">Populares</a>
+                            <a href="#" onclick="fetchMovies('now_playing')">Actualmente en Cartelera</a>
+                            <a href="#" onclick="fetchMovies('upcoming')">Proximamente</a>
+                            <a href="#" onclick="fetchMovies('top_rated')">Mejores Valoradas</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Series</a>
+                        <div class="dropdown-content">
+                            <a href="#" onclick="fetchSeries('popular')">Populares</a>
+                            <a href="#" onclick="fetchSeries('airing_today')">En Emisio Hoy</a>
+                            <a href="#" onclick="fetchSeries('on_the_air')">Solo en TV</a>
+                            <a href="#" onclick="fetchSeries('top_rated')">Mejores Valoradas</a>
+                        </div>
+                    </li>
+                 
+                </ul>
+            </div>
+            <div class="nav-right">
+                <form id="search-form">
+                    <input type="text" id="search-input" placeholder="Buscar Pelicula...">
+                    <select id="category-select">
+                        <option value="">Categorias</option>
+                    </select>
+                    <button type="submit">Buscar Pelicula</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <div id="app">
+        <div id="movie-list" class="movie-list"></div>
+        <button id="load-more" style="display: none;">Mas Peliculas</button>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

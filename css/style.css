@@ -1,0 +1,192 @@
+/* Reset some default styles */
+body, h1, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url(../images/fondo_pelicula.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+header {
+    background-color: #2c3e50;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.nav-left h1 {
+    color: #fff;
+    margin: 0;
+}
+
+.nav-center ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-center ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.nav-center ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-center ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.nav-center ul li .dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: normal;
+}
+
+.nav-center ul li .dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.nav-center ul li:hover .dropdown-content {
+    display: block;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+#search-form {
+    display: flex;
+    margin-bottom: 0;
+}
+
+#search-form input, #search-form select, #search-form button {
+    padding: 10px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#search-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#search-form button:hover {
+    background-color: #0056b3;
+}
+
+#app {
+    max-width: 1200px;
+    margin: 80px auto 20px; /* Añadimos margen superior para el header */
+    padding: 0 15px;
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Ajustamos para que ocupe más espacio */
+    margin-top: 100px; /* Asegura que las películas no se superpongan con el encabezado */
+}
+
+.movie {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    width: calc(25% - 20px); /* Ajusta el ancho para que se expanda más */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, opacity 1s; /* Añade la transición para la animación */
+    opacity: 0; /* Para la animación */
+}
+
+.movie img {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.movie h3 {
+    font-size: 1.1em;
+    margin: 0;
+}
+
+.movie p {
+    color: #000;
+    font-size: 0.9em;
+}
+
+.movie:hover {
+    transform: translateY(-10px);
+}
+
+#load-more {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#load-more:hover {
+    background-color: #0056b3;
+}
+
+a {
+    line-height: 1; /* Ajusta el line-height para eliminar el interlineado */
+    text-decoration: none; /* Elimina el subrayado por defecto */
+    color: inherit; /* Hereda el color del elemento padre */
+}
+
+a:hover {
+    text-decoration: underline; /* Opcional: añade subrayado al pasar el ratón */
+}

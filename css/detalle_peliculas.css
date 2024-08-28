@@ -1,0 +1,113 @@
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: url(../images/fondo_pelicula.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    padding: 20px;
+}
+
+#app {
+    max-width: 1600px; /* Aumenta el ancho máximo del contenedor */
+    margin: 0 auto;
+}
+
+.back-button {
+    margin-bottom: 20px;
+    width: 50px; /* Ajusta el tamaño del botón de regreso */
+    height: auto;
+    cursor: pointer;
+}
+
+.movie-details-container {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+}
+
+.poster {
+    flex: 1.5; /* Aumenta el espacio del póster */
+    margin-right: 20px;
+}
+
+.poster img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.details {
+    flex: 2.5; /* Incrementa la proporción de la sección de detalles */
+    padding: 20px;
+    position: relative;
+}
+
+.details h1 {
+    font-size: 2.5em; /* Incrementa el tamaño de la fuente para el título */
+    margin-bottom: 10px;
+}
+
+.details p {
+    margin-bottom: 20px; /* Añade un margen inferior a los párrafos */
+    font-size: 1.2em; /* Incrementa el tamaño de la fuente para los párrafos */
+}
+
+.rating-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.rating-stars {
+    display: flex;
+}
+
+.rating-stars img {
+    width: 124px; /* Tamaño de la estrella */
+    height: 124px; /* Tamaño de la estrella */
+    margin-right: 5px; /* Espaciado entre estrellas */
+}
+
+.actors-link {
+    margin-left: 10px;
+    width: 84px; /* Tamaño del ícono de actores */
+    height: auto;
+    cursor: pointer;
+}
+
+#trailer-container {
+    margin-top: 20px;
+}
+
+#trailer {
+    width: 100%; /* Aumenta el ancho del tráiler para que se ajuste al contenedor */
+    height: 300px; /* Reduce la altura del tráiler */
+    margin-bottom: 20px; /* Añade un margen inferior */
+}
+
+h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 2em; /* Incrementa el tamaño de la fuente para los subtítulos */
+}
+
+#crew {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#crew p {
+    flex: 1 1 50%;
+    margin-bottom: 5px;
+    font-size: 1.2em; /* Incrementa el tamaño de la fuente para los nombres del equipo */
+}
